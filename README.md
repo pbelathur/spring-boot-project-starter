@@ -1,4 +1,4 @@
-# Spring Boot Starter Project
+# Spring Boot Project Starter
 
 ### Purpose
 A _ready to use_ web application based on Spring Boot v2.2.4.  
