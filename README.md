@@ -1,7 +1,7 @@
 # Spring Boot Project Starter
 
-### Purpose
-A _ready to use_ web application based on Spring Boot v2.2.4.  
+### A _ready to use_ web application based on Spring Boot v2.2.4.  
+
 This application contains the following:
 * Spring Boot actuator, devtools and web starters.
 * Lombok dependency and annotation processing.
@@ -11,13 +11,13 @@ This application contains the following:
 * Inclusion of GIT properties in actuator _info_ endpoint 
 
 # Getting Started
-1. Clone this repo from the Github
-2. Open a command window and navigate to `spring-boot-project-starter` directory
-3. `./gradlew build bootRun`
-4. Verify the spring boot application is running using actuator healthcheck endpoint `http://localhost:8080/actuator/health`
+1. clone this repo
+2. open a command window and navigate to `spring-boot-project-starter` directory
+3. build and run the application: `./gradlew bootRun`
+4. verify the application is running using `http://localhost:8080/actuator/health`
 
 ## Deploy to Cloud Foundry
 1. open a command window and navigate to `spring-boot-project-starter` directory
-2. `./gradlew clean bootJar`
+2. create the deploy artifact using `./gradlew clean bootJar`
 3. verify `build/libs/spring-boot-project-starter.jar` exists
-4. `cf push`
+4. deploy to PCF using `cf push`
