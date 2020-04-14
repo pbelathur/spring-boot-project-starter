@@ -1,0 +1,19 @@
+application:
+  name: springboot-project-starter
+  version: 0.0.1
+
+management:
+  info:
+    git:
+      mode: full
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics
+  endpoint:
+    health:
+      show-details: always
+
+spring:
+  main:
+    lazy-initialization: true

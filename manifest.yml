@@ -1,0 +1,5 @@
+---
+- name: spring-boot-project-starter
+  memory: 512M
+  disk_quota: 512M
+  path: ./build/libs/spring-boot-project-starter.jar
