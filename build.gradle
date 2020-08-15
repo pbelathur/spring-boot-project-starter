@@ -25,9 +25,14 @@ repositories {
 dependencies {
 
 	// spring dependencies
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// exclude junit4 enable junit5
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
 
 	// lombok related
 	compileOnly 'org.projectlombok:lombok'
@@ -38,10 +43,10 @@ dependencies {
 	runtimeOnly 'com.ibm.db2:jcc'
 	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
 
-	// exclude junit4 enable junit5
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	// swagger api generation
+	compile 'io.springfox:springfox-swagger2:2.9.2'
+	compile 'io.springfox:springfox-swagger-ui:2.9.2'
+	compile 'io.springfox:springfox-bean-validators:2.9.2'
 }
 
 test {
